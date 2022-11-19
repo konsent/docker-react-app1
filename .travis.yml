@@ -1,0 +1,16 @@
+sudo: required
+
+language: generic
+
+services:
+  - docker
+
+before_install:
+  - echo "Start creating and img with Dockerfile"
+  - docker build -t konsent/docker-react-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true konsent/docker-react-app npm run test -- --coverage
+
+after_success:
+  - echo "TEST SUCCESS"
