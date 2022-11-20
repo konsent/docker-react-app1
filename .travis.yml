@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "Start creating and img with Dockerfile"
-  - docker build -t konsent/docker-react-app -f Dockerfile .
+  - docker build -t konsent/docker-react-app -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true konsent/docker-react-app npm run test -- --coverage
@@ -16,6 +16,7 @@ after_success:
   - echo "TEST SUCCESS"
 
 deploy:
+  edge: true
   provider: elasticbeanstalk
   region: "us-east-2"
   app: "docker-react-app"
