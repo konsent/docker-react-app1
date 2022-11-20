@@ -18,11 +18,11 @@ after_success:
 deploy:
   edge: true
   provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "docker-react-app"
-  env: "Dockerreactapp-env"
-  bucket_name: "elasticbeanstalk-us-east-2-859621957271"
-  bucket_path: "docker-react-app"
+  region: us-east-2
+  app: docker-react-app
+  env: Dockerreactapp-env
+  bucket_name: elasticbeanstalk-us-east-2-859621957271
+  bucket_path: docker-react-app
   on:
     branch: main
 
