@@ -8,4 +8,5 @@ RUN npm run build
 
 # 구동을 위한 단계(Run stage)
 FROM nginx
+EXPOSE 80
 COPY --from=builder /usr/src/app/build /usr/share/nginx/html
