@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "Start creating and img with Dockerfile"
-  - docker build -t konsent/docker-react-app -f Dockerfile.dev .
+  - docker build -t konsent/docker-react-app -f Dockerfile .
 
 script:
   - docker run -e CI=true konsent/docker-react-app npm run test -- --coverage
