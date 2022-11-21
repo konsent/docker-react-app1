@@ -1,1 +1,1 @@
-# 도커 컨테이너 기반 리액트 앱 개발 및 Travis CI를 이용한 CI/CD 환경 구성 실습
+# 도커 및 Travis CI를 이용한 CI/CD 구성 실습
